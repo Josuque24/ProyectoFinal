@@ -6,10 +6,9 @@ public class Main {
         Provincias p=new Provincias();
         Descuento d=new Descuento();  
         m.responderMenuPrincipal();
-        //m.responderMenuCompraVenta(); borrar
         //p.selecionarProvincia();
-        /*d.referirNombres();
-        d.mostrarNombresReferidos();*/
+        //d.referirNombres();
+        //d.mostrarNombresReferidos();
         
     }    
 }
