@@ -1,16 +1,16 @@
 package proyecto00;
 import javax.swing.JOptionPane;
 public class Menu2 {
-private byte answerMenuCompraVenta;    
+private byte respuestaMenuCompraVenta;    
     public void responderMenuCompraVenta(){
-        while(answerMenuCompraVenta==3){
-        answerMenuCompraVenta=Byte.parseByte(JOptionPane.showInputDialog (null,
+        while(respuestaMenuCompraVenta!=3){
+        respuestaMenuCompraVenta=Byte.parseByte(JOptionPane.showInputDialog (null,
                                             "Desea vender o comprar bienes raices?\n"
                                             +"1) Vender \n"
                                             +"2) Comprar \n" 
                                             +"3) Salir"
                                             ));             
-            switch(answerMenuCompraVenta){
+            switch(respuestaMenuCompraVenta){
                   case 1:{
 
                     break; 
@@ -20,10 +20,6 @@ private byte answerMenuCompraVenta;
                      break;
                   }
                   case 3:{
-
-                     break;
-                  }
-                   case 4:{
 
                      break;
                   }
