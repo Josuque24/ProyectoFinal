@@ -33,13 +33,13 @@ public class Menu2 {
                         v.ingresarDatosPropiedadConstruida();
                         v.mostrarDatosPropiedadConstruida();
                         v.archivarDatosPropiedadConstruida();
-                    }else{
+                    }if(respuestaMenuVenta==0||respuestaMenuVenta>3){
                         JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
                     }//fin de if
                 //} // fin de while
                 
             }if(respuestaMenuCompraVenta==2){
-                
+                Compra c=new Compra();
                 //while(respuestaMenuCompra !=3){
                     respuestaMenuCompra = Byte.parseByte(JOptionPane.showInputDialog (null,""
                         + "¿Que desea? \n" 
@@ -47,15 +47,19 @@ public class Menu2 {
                         + "2) Comprar un lote con un edificio ya construido. \n"
                         + "3) Salir de este menu."    ));
                     if(respuestaMenuCompra==1){
-
+                        c.ingresarDatosPropiedadBaldia();
+                        c.mostrarDatosPropiedadBaldia();
+                        c.archivarDatosPropiedadBaldia();
                     }if(respuestaMenuCompra==2){
-
-                    }else{
+                        c.ingresarDatosPropiedadConstruida();
+                        c.mostrarDatosPropiedadConstruida();
+                        c.archivarDatosPropiedadConstruida();
+                    }if(respuestaMenuCompra==0||respuestaMenuCompra>3){
                         JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
                     }//fin de if                 
                 //} // fin de while
                 
-            }else{
+            }if(respuestaMenuCompraVenta==0||respuestaMenuCompraVenta>3){
                 JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
             }
         }  
