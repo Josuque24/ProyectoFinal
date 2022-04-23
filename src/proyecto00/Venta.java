@@ -43,9 +43,9 @@ public class Venta {
        if(venderPropiedad[0].getSala()==1){c="Si";}else{c="No";}
        if(venderPropiedad[0].getGaraje()==1){d="Si";}else{d="No";}
        if(venderPropiedad[0].getCuartoLavado()==1){e="Si";}else{e="No";}
-       if(venderPropiedad[0].getCantBaños()>1){f=" baño";}else{f=" baños";}
+       if(venderPropiedad[0].getCantBaños()>1){f=" baños";}else{f=" baño";}
        
-       String s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+"\n"
+       String s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
                +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
                +"La propiedad tiene "+venderPropiedad[0].getCantHabitaciones()+" habitaciones. \n"
                + a + "\n"
