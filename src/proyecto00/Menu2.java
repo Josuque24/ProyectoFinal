@@ -19,7 +19,7 @@ public class Menu2 {
             if(respuestaMenuCompraVenta==1){
                 
                 Venta v=new Venta ();
-                while(respuestaMenuVenta !=3){
+                //while(respuestaMenuVenta !=3){
                     respuestaMenuVenta = Byte.parseByte(JOptionPane.showInputDialog (null,""
                         + "¿Que desea? \n" 
                         + "1) Vender un lote baldío. \n"
@@ -27,16 +27,20 @@ public class Menu2 {
                         + "3) Salir de este menu. \n"));
                     if(respuestaMenuVenta==1){
                         v.ingresarDatosPropiedadBaldia();
+                        v.mostrarDatosPropiedadBaldia();
+                        v.archivarDatosPropiedadBaldia();
                     }if(respuestaMenuVenta==2){
                         v.ingresarDatosPropiedadConstruida();
+                        v.mostrarDatosPropiedadConstruida();
+                        v.archivarDatosPropiedadConstruida();
                     }else{
                         JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
                     }//fin de if
-                } // fin de while
+                //} // fin de while
                 
             }if(respuestaMenuCompraVenta==2){
                 
-                while(respuestaMenuCompra !=3){
+                //while(respuestaMenuCompra !=3){
                     respuestaMenuCompra = Byte.parseByte(JOptionPane.showInputDialog (null,""
                         + "¿Que desea? \n" 
                         + "1) Comprar un lote baldío. \n"
@@ -49,49 +53,11 @@ public class Menu2 {
                     }else{
                         JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
                     }//fin de if                 
-                } // fin de while
+                //} // fin de while
                 
             }else{
                 JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
             }
         }  
     }  
-    
-    public void mostrarFinal(){
-        try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\usuario.txt";
-            String contenido = ("");
-            File file = new File(ruta);
-            // Si el archivo no existe es creado
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-            FileWriter fw = new FileWriter(file);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(contenido);
-            bw.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    } // fin de mostrarFinal
-    
 } 
-
-
-/* switch(respuestaMenuCompraVenta){
-                  case 1:{
-
-                    break; 
-                  }
-                  case 2:{
-
-                     break;
-                  }
-                  case 3:{
-
-                     break;
-                  }
-                  default:{
-                     JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
-                  }
-            } //fin de switch */
