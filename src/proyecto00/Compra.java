@@ -11,7 +11,7 @@ public class Compra {
                 "Ingrese la cantidad de metros cuadrados que desea que posea la propiedad:")));
         pro.setCantHabitaciones(Byte.parseByte(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de habitaciones que debe tener la propiedad:")));
-        pro.setMedidasPatio(Integer.parseInt(JOptionPane.showInputDialog(null,
+        pro.setMedidasPatio(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "La propiedad debe tener patio? \n"
                 +"0) No \n"+" 1) Si ")));
         pro.setCantBaños(Byte.parseByte(JOptionPane.showInputDialog(null,
