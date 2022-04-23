@@ -8,25 +8,26 @@ public class Compra {
         pro.setValorPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de dinero que esta dispuesto a invertir en la propiedad:")));
         pro.setMedidasPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
-                "Ingrese la cantidad de metros cuadrados que quiere que la propiedad tenga:")));
+                "Ingrese la cantidad de metros cuadrados que desea que posea la propiedad:")));
         pro.setCantHabitaciones(Byte.parseByte(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de habitaciones que debe tener la propiedad:")));
         pro.setMedidasPatio(Integer.parseInt(JOptionPane.showInputDialog(null,
                 "La propiedad debe tener patio? \n"
-                +"0)No \n"+" 1) Si ")));
+                +"0) No \n"+" 1) Si ")));
         pro.setCantBaños(Byte.parseByte(JOptionPane.showInputDialog(null,
-                "Ingrese la cantidad de baños que hay en la propiedad:")));
+                "Ingrese la cantidad de baños que desea en la propiedad:")));
         pro.setComedor(Byte.parseByte(JOptionPane.showInputDialog(null,
-                "Cuenta la propiedad con un comedor?\"\n" +
-                "0)No \n"+" 1) Si ")));
+                "Desea una propiedad con un comedor?\"\n" +
+                "0) No \n"+" 1) Si ")));
         pro.setSala(Byte.parseByte(JOptionPane.showInputDialog(null,
-                "Cuenta la propiedad con una sala?\"\n" +
-                "0)No \n"+" 1) Si ")));
+                "Desea una propiedad con una sala?\"\n" +
+                "0) No \n"+" 1) Si ")));
         pro.setGaraje(Byte.parseByte(JOptionPane.showInputDialog(null,
-                "Cuenta la propiedad con un garaje?\"\n" +
-                "0)No \n"+" 1) Si ")));
+                "Desea una propiedad con un garaje?\"\n" +
+                "0) No \n"+" 1) Si ")));
         pro.setCuartoLavado(Byte.parseByte(JOptionPane.showInputDialog(null,
-                "")));
+                "Desea una propiedad con uncuarto de lavado? \n"
+                +"0) No \n"+" 1) Si ")));
         comprarPropiedad[0]=pro; 
     } // fin de   ingresarDatosPropiedadConstruida
     
