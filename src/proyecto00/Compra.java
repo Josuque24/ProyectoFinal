@@ -1,10 +1,13 @@
 package proyecto00;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import javax.swing.JOptionPane;
 public class Compra {
     private Propiedad comprarPropiedad []=new Propiedad [1];
     private String s,q;
     
-    public void ingresarDatosPropiedadConstruida () {
+   public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
         pro.setValorPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de dinero que esta dispuesto a invertir en la propiedad:")));
@@ -52,7 +55,23 @@ public class Compra {
        JOptionPane.showMessageDialog(null,s);
    } 
    
-   
+   public void archivarDatosPropiedadConstruida(){
+        try {
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadConstruida.txt";
+            String contenido = (s);
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } 
    
     
     public void ingresarDatosPropiedadBaldia (){
