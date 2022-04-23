@@ -1,4 +1,7 @@
 package proyecto00;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import javax.swing.JOptionPane;
 public class Descuento {
     private String a;
@@ -11,7 +14,7 @@ public class Descuento {
         answerDescuento = JOptionPane.showConfirmDialog(null,
                     "Anote el nombre y el correo electronico de 3 amigos. \n"
                     +"Para que ellos puedan recibir información de esta increible app \n"
-                    +"Y gane un 5% de descuento al realizar una compra.",
+                    +"Y gane un 2% de descuento al realizar una compra.",
                     "¿Desea aplicar por un 2% de descuento?", JOptionPane.YES_NO_OPTION);
                         if (answerDescuento == JOptionPane.YES_OPTION) {
                           /* int x/*,y;*/
@@ -45,5 +48,24 @@ public class Descuento {
             a=s;
             JOptionPane.showMessageDialog(null,s);
         }
-    }   
+    }
+    
+    public void archivarUsuario(){
+        try {
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\referencia.txt";
+            String contenido = (a);
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } 
+    
 }
