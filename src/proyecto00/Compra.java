@@ -57,7 +57,7 @@ public class Compra {
    
    public void archivarDatosPropiedadConstruida(){
         try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadConstruida.txt";
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\comprarPropiedadConstruida.txt";
             String contenido = (s);
             File file = new File(ruta);
             // Si el archivo no existe es creado
@@ -73,15 +73,36 @@ public class Compra {
         }
     } 
    
-    
     public void ingresarDatosPropiedadBaldia (){
         Propiedad pro=new Propiedad ();
-        pro.setValorPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
-                "Ingresar el valor de la propiedad:")));
-        pro.setMedidasPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
-                "Ingresar la cantidad de metros cuadrados que tiene la propiedad:")));
+        pro.setValorPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
+                "Ingrese la cantidad de dinero que esta dispuesto a invertir en la propiedad:")));
+        pro.setMedidasPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
+                "Ingrese la cantidad de metros cuadrados que desea que posea la propiedad:")));
         comprarPropiedad[0]=pro;
     } // fin de ingresarDatosPropiedadBaldia
                
+    public void mostrarDatosPropiedadBaldia () {       
+        q="La cantidad de dinero dispuesto a invertirse en la compra es: "+ comprarPropiedad[0].getValorPropiedad()+" colones. \n"
+        +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n" ;      
+        JOptionPane.showMessageDialog(null,q);
+    }
     
+    public void archivarDatosPropiedadBaldia(){
+        try {
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\compraPropiedadBaldia.txt";
+            String contenido = (q);
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
