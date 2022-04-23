@@ -1,6 +1,7 @@
 package proyecto00;
 import javax.swing.JOptionPane;
 public class Descuento {
+    private String a;
     private int answerDescuento;
     private int x;
     private Persona referencias[]=new Persona[3];
@@ -11,7 +12,7 @@ public class Descuento {
                     "Anote el nombre y el correo electronico de 3 amigos. \n"
                     +"Para que ellos puedan recibir información de esta increible app \n"
                     +"Y gane un 5% de descuento al realizar una compra.",
-                    "¿Desea aplicar por un 5% de descuento?", JOptionPane.YES_NO_OPTION);
+                    "¿Desea aplicar por un 2% de descuento?", JOptionPane.YES_NO_OPTION);
                         if (answerDescuento == JOptionPane.YES_OPTION) {
                           /* int x/*,y;*/
                            for(x=0;x<3;x++){
@@ -34,15 +35,15 @@ public class Descuento {
     
     public void mostrarNombresReferidos(){
         if(answerDescuento==JOptionPane.YES_OPTION){
-        int x;
-        String s="";
-        for(x=0;x<3;x++){            
-        s= s+ "El nombre del amigo "+(x+1)+" es "+referencias[x].getNombre()
-                +" su email es "+referencias[x].getEmail()+" y su número de teléfono es "+
-            referencias[x].getNumeroTelefono()+" \n";
-        }
-        
-        JOptionPane.showMessageDialog(null,s);
+            int x;
+            String s="";
+            for(x=0;x<3;x++){            
+            s= s+ "El nombre del amigo "+(x+1)+" es "+referencias[x].getNombre()
+                    +" su email es "+referencias[x].getEmail()+" y su número de teléfono es "+
+                referencias[x].getNumeroTelefono()+" \n";
+            }
+            a=s;
+            JOptionPane.showMessageDialog(null,s);
         }
     }   
-    }
+}
