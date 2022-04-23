@@ -76,7 +76,7 @@ public class Venta {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    } // fin de mostrarFinal
+    } 
     
     public void ingresarDatosPropiedadBaldia (){
         String s=" ";
@@ -93,5 +93,23 @@ public class Venta {
        +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" ;      
        JOptionPane.showMessageDialog(null,q);
    } 
+     
+     public void archivarDatosPropiedadBaldia(){
+        try {
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadBaldia.txt";
+            String contenido = (q);
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // fin de mostrarFinal
     
 } // fin de compra
