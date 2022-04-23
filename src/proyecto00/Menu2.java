@@ -56,6 +56,7 @@ public class Menu2 {
                         c.ingresarDatosPropiedadConstruida();
                         c.mostrarDatosPropiedadConstruida();
                         c.archivarDatosPropiedadConstruida();
+                        d.referirNombres();
                     }if(respuestaMenuCompra==0||respuestaMenuCompra>3){
                         JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
                     }//fin de if                 
