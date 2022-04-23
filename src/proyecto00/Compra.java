@@ -2,7 +2,7 @@ package proyecto00;
 import javax.swing.JOptionPane;
 public class Compra {
     private Propiedad comprarPropiedad []=new Propiedad [1];
-    private String s;
+    private String s,q;
     
     public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
@@ -34,25 +34,21 @@ public class Compra {
     
    public void mostrarDatosPropiedadConstruida () {
        String a,b,c,d,e;
-       if(venderPropiedad[0].getMedidasPatio()>0){
-        a="La propiedad tiene patio de "+venderPropiedad[0].getMedidasPatio()+ " m²" ;
-       }else{
-        a="La propiedad no tiene patio.";   
-       }
-       if(venderPropiedad[0].getComedor()==1){b= "Si";}else{b= "No";}
-       if(venderPropiedad[0].getSala()==1){c="Si";}else{c="No";}
-       if(venderPropiedad[0].getGaraje()==1){d="Si";}else{d="No";}
-       if(venderPropiedad[0].getCuartoLavado()==1){e="Si";}else{e="No";}
+       if(comprarPropiedad[0].getMedidasPatio()==1){a="Si";}else{a="No";}
+       if(comprarPropiedad[0].getComedor()==1){b= "Si";}else{b= "No";}
+       if(comprarPropiedad[0].getSala()==1){c="Si";}else{c="No";}
+       if(comprarPropiedad[0].getGaraje()==1){d="Si";}else{d="No";}
+       if(comprarPropiedad[0].getCuartoLavado()==1){e="Si";}else{e="No";}
        
-       String s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+"\n"
-               +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
-               +"La propiedad tiene "+venderPropiedad[0].getCantHabitaciones()+" habotaciones."
-               + "La propiedad tiene "patio + "\n"
-               +"La propiedad tiene "+venderPropiedad[0].getCantBaños()+" \n"
-               +"la propiedad tiene comedor: "+ b +"\n"
-               +"La propiedad tiene sala: "+ c + "\n"
-               +"La propiedad tiene garaje: "+ d +"\n"
-               +"La cantidad tiene cuarto de lavado: "+ e +"\n";
+       s="La cantidad de dinero dispuesto a invertirse en la compra es: "+ comprarPropiedad[0].getValorPropiedad()+" colones. \n"
+               +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n" 
+               +"La propiedad debe tener "+comprarPropiedad[0].getCantHabitaciones()+" habitaciones."
+               +"La propiedad debe tener  patio: "+ a + "\n"
+               +"La propiedad debe tener "+comprarPropiedad[0].getCantBaños()+" \n"
+               +"La propiedad debe tener comedor: "+ b +"\n"
+               +"La propiedad debe tener sala: "+ c + "\n"
+               +"La propiedad debe tener garaje: "+ d +"\n"
+               +"La cantidad debe tener cuarto de lavado: "+ e +"\n";
        JOptionPane.showMessageDialog(null,s);
    } 
    
