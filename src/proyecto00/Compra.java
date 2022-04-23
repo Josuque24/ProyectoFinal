@@ -2,6 +2,7 @@ package proyecto00;
 import javax.swing.JOptionPane;
 public class Compra {
     private Propiedad comprarPropiedad []=new Propiedad [1];
+    private String s;
     
     public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
@@ -46,7 +47,7 @@ public class Compra {
        String s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+"\n"
                +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
                +"La propiedad tiene "+venderPropiedad[0].getCantHabitaciones()+" habotaciones."
-               + a + "\n"
+               + "La propiedad tiene "patio + "\n"
                +"La propiedad tiene "+venderPropiedad[0].getCantBaños()+" \n"
                +"la propiedad tiene comedor: "+ b +"\n"
                +"La propiedad tiene sala: "+ c + "\n"
