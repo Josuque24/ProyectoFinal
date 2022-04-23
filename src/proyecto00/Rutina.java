@@ -11,7 +11,6 @@ public void predefinirUsuario (){
 }//fin de ingresarDatosUsuario
 
 public void mostrarUsuario(){
-    //int x=0;
   JOptionPane.showMessageDialog(null," Nombre: " + usuario[0].getNombre()
                                 +"\n Email: " + usuario[0].getEmail()
                                 +"\n Numero de Telefono: " + usuario[0].getNumeroTelefono());  
@@ -25,11 +24,6 @@ public void modificarUsuario (){
     usuario[0]=p;
 } //fin de modificarUsuario
      
-public void ingresarDatosPropiedadConstruida () {
-    
-} // fin de   ingresarDatosPropiedadConstruida
-
-
 public void mostrarFinal(){
         try {
             String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\usuario.txt";
@@ -48,7 +42,7 @@ public void mostrarFinal(){
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    } // fin de mostrarFinal
 
 
 } // fin de rutina 
