@@ -61,6 +61,7 @@ public class Compra {
                 "Ingresar el valor de la propiedad:")));
         pro.setMedidasPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
                 "Ingresar la cantidad de metros cuadrados que tiene la propiedad:")));
+        comprarPropiedad[0]=pro;
     } // fin de ingresarDatosPropiedadBaldia
                
     
