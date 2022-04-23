@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import javax.swing.JOptionPane;
 public class Venta {
     private Propiedad venderPropiedad []=new Propiedad [1];
-    String s;
+    String s,q;
     
     public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
@@ -34,7 +34,6 @@ public class Venta {
                 "0)No \n"+ "1) Si ")));
         venderPropiedad[0]=pro;        
     } // fin de   ingresarDatosPropiedadConstruida
-    
     
     public void mostrarDatosPropiedadConstruida () {
        String a,b,c,d,e,f;
@@ -88,5 +87,11 @@ public class Venta {
                 "Ingresar la cantidad de metros cuadrados que tiene la propiedad:")));
         venderPropiedad[0]=pro; 
     } // fin de ingresarDatosPropiedadBaldia
+    
+     public void mostrarDatosPropiedadBaldia () {       
+       q="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
+       +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" ;      
+       JOptionPane.showMessageDialog(null,q);
+   } 
     
 } // fin de compra
