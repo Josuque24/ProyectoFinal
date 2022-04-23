@@ -1,7 +1,7 @@
 package proyecto00;
 import javax.swing.JOptionPane;
 public class Compra {
-    private Propiedad venderPropiedad []=new Propiedad [1];
+    private Propiedad comprarPropiedad []=new Propiedad [1];
     
     public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
@@ -27,9 +27,35 @@ public class Compra {
                 "+\"0)No 1) Si ")));
         pro.setCuartoLavado(Byte.parseByte(JOptionPane.showInputDialog(null,
                 "")));
-        venderPropiedad[0]=pro; 
-        
+        comprarPropiedad[0]=pro; 
     } // fin de   ingresarDatosPropiedadConstruida
+    
+   public void mostrarDatosPropiedadConstruida () {
+       String a,b,c,d,e;
+       if(venderPropiedad[0].getMedidasPatio()>0){
+        a="La propiedad tiene patio de "+venderPropiedad[0].getMedidasPatio()+ " m²" ;
+       }else{
+        a="La propiedad no tiene patio.";   
+       }
+       if(venderPropiedad[0].getComedor()==1){b= "Si";}else{b= "No";}
+       if(venderPropiedad[0].getSala()==1){c="Si";}else{c="No";}
+       if(venderPropiedad[0].getGaraje()==1){d="Si";}else{d="No";}
+       if(venderPropiedad[0].getCuartoLavado()==1){e="Si";}else{e="No";}
+       
+       String s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+"\n"
+               +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
+               +"La propiedad tiene "+venderPropiedad[0].getCantHabitaciones()+" habotaciones."
+               + a + "\n"
+               +"La propiedad tiene "+venderPropiedad[0].getCantBaños()+" \n"
+               +"la propiedad tiene comedor: "+ b +"\n"
+               +"La propiedad tiene sala: "+ c + "\n"
+               +"La propiedad tiene garaje: "+ d +"\n"
+               +"La cantidad tiene cuarto de lavado: "+ e +"\n";
+       JOptionPane.showMessageDialog(null,s);
+   } 
+   
+   
+   
     
     public void ingresarDatosPropiedadBaldia (){
         Propiedad pro=new Propiedad ();
