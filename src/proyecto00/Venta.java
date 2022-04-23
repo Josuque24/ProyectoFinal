@@ -1,7 +1,11 @@
 package proyecto00;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import javax.swing.JOptionPane;
 public class Venta {
     private Propiedad venderPropiedad []=new Propiedad [1];
+    String s;
     
     public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
@@ -45,7 +49,7 @@ public class Venta {
        if(venderPropiedad[0].getCuartoLavado()==1){e="Si";}else{e="No";}
        if(venderPropiedad[0].getCantBaños()>1){f=" baños";}else{f=" baño";}
        
-       String s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
+       s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
                +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
                +"La propiedad tiene "+venderPropiedad[0].getCantHabitaciones()+" habitaciones. \n"
                + a + "\n"
@@ -56,6 +60,24 @@ public class Venta {
                +"La cantidad tiene cuarto de lavado: "+ e +"\n";
        JOptionPane.showMessageDialog(null,s);
    } 
+    
+    public void archivarDatosPropiedadConstruida(){
+        try {
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadConstruida.txt";
+            String contenido = (s);
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // fin de mostrarFinal
     
     public void ingresarDatosPropiedadBaldia (){
         String s=" ";
