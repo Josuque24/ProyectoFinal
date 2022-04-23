@@ -1,7 +1,6 @@
 package proyecto00;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 import javax.swing.JOptionPane;
 public class Compra {
     private Propiedad comprarPropiedad []=new Propiedad [1];
