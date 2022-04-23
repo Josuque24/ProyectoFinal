@@ -40,6 +40,7 @@ public class Menu2 {
                 
             }if(respuestaMenuCompraVenta==2){
                 Compra c=new Compra();
+                Descuento d=new Descuento();
                 //while(respuestaMenuCompra !=3){
                     respuestaMenuCompra = Byte.parseByte(JOptionPane.showInputDialog (null,""
                         + "¿Que desea? \n" 
@@ -50,6 +51,7 @@ public class Menu2 {
                         c.ingresarDatosPropiedadBaldia();
                         c.mostrarDatosPropiedadBaldia();
                         c.archivarDatosPropiedadBaldia();
+                        d.referirNombres();
                     }if(respuestaMenuCompra==2){
                         c.ingresarDatosPropiedadConstruida();
                         c.mostrarDatosPropiedadConstruida();
