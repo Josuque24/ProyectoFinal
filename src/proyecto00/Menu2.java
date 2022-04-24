@@ -1,4 +1,4 @@
-package proyecto00;
+ package proyecto00;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -40,23 +40,22 @@ public class Menu2 {
                 
             }if(respuestaMenuCompraVenta==2){
                 Compra c=new Compra();
-                Descuento d=new Descuento();
                 //while(respuestaMenuCompra !=3){
                     respuestaMenuCompra = Byte.parseByte(JOptionPane.showInputDialog (null,""
-                        + "¿Que desea? \n" 
+                        + "¿Que desea? \n"                        
                         + "1) Comprar un lote baldío. \n"
                         + "2) Comprar un lote con un edificio ya construido. \n"
                         + "3) Salir de este menu."    ));
                     if(respuestaMenuCompra==1){
                         c.ingresarDatosPropiedadBaldia();
                         c.mostrarDatosPropiedadBaldia();
-                        c.archivarDatosPropiedadBaldia();
-                        d.referirNombres();
+                        c.archivarDatosPropiedadBaldia();    
+                        c.referirNombresDescuentoBaldia();
                     }if(respuestaMenuCompra==2){
                         c.ingresarDatosPropiedadConstruida();
                         c.mostrarDatosPropiedadConstruida();
                         c.archivarDatosPropiedadConstruida();
-                        d.referirNombres();
+                        c.referirNombresDescuentoConstruido();
                     }if(respuestaMenuCompra==0||respuestaMenuCompra>3){
                         JOptionPane.showMessageDialog(null,"Escribio un numero que no es parte del menu.");
                     }//fin de if                 
