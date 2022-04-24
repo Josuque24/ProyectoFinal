@@ -20,6 +20,10 @@ public class Venta {
                 +"Si no tiene patio escriba cero","0")));
         pro.setCantBaños(Byte.parseByte(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de baños que hay en la propiedad:")));
+        pro.setDireccion(JOptionPane.showInputDialog(null,
+                "Ingrese la direccion de donde le gustaria que se ubique la propiedad: "));
+        pro.setAnotaciones(JOptionPane.showInputDialog(null,
+                "Ingrese anotaciones si las hay:"));      
         pro.setComedor(Byte.parseByte(JOptionPane.showInputDialog(null,
                 "Cuenta la propiedad con un comedor?\"\n" +
                 "0)No \n"+ "1) Si ")));
@@ -46,14 +50,16 @@ public class Venta {
        if(venderPropiedad[0].getSala()==1){c="Si";}else{c="No";}
        if(venderPropiedad[0].getGaraje()==1){d="Si";}else{d="No";}
        if(venderPropiedad[0].getCuartoLavado()==1){e="Si";}else{e="No";}
-       if(venderPropiedad[0].getCantBaños()>1){f=" baños";}else{f=" baño";}
+       if(venderPropiedad[0].getCantBaños()>1||venderPropiedad[0].getCantBaños()==0){f=" baños";}else{f=" baño";}
        
        s="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
                +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
                +"La propiedad tiene "+venderPropiedad[0].getCantHabitaciones()+" habitaciones. \n"
-               + a + "\n"
                +"La propiedad tiene "+venderPropiedad[0].getCantBaños()+f+" \n"
-               +"la propiedad tiene comedor: "+ b +"\n"
+               +a+" \n"
+               +"La direccion de la propiedad es: "+venderPropiedad[0].getDireccion() + " \n"
+               +"Anotaciones: "+ venderPropiedad[0].getAnotaciones() + " \n"
+               +"La propiedad tiene comedor: "+ b +"\n"
                +"La propiedad tiene sala: "+ c + "\n"
                +"La propiedad tiene garaje: "+ d +"\n"
                +"La cantidad tiene cuarto de lavado: "+ e +"\n";
@@ -78,6 +84,8 @@ public class Venta {
         }
     } 
     
+    ////////////////////////////////////////////////////////////////////////////////////
+    
     public void ingresarDatosPropiedadBaldia (){
         String s=" ";
         Propiedad pro=new Propiedad ();
@@ -85,12 +93,18 @@ public class Venta {
                 "Ingresar el valor de la propiedad:")));
         pro.setMedidasPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingresar la cantidad de metros cuadrados que tiene la propiedad:")));
+        pro.setDireccion(JOptionPane.showInputDialog(null,
+                "Ingrese la direccion de donde le gustaria que se ubique la propiedad: "));
+        pro.setAnotaciones(JOptionPane.showInputDialog(null,
+                "Ingrese anotaciones si las hay:"));  
         venderPropiedad[0]=pro; 
     } // fin de ingresarDatosPropiedadBaldia
     
     public void mostrarDatosPropiedadBaldia () {       
        q="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
-       +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" ;      
+       +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" 
+       +"La direccion de la propiedad es: "+venderPropiedad[0].getDireccion() + " \n"
+       +"Anotaciones: \n"+ venderPropiedad[0].getAnotaciones() + " \n";      
        JOptionPane.showMessageDialog(null,q);
     } 
      
