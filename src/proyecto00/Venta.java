@@ -67,6 +67,7 @@ public class Venta {
    } 
     
     public void archivarDatosPropiedadConstruida(){
+        JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");
         try {
             String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadConstruida.txt";
             String contenido = (s);
@@ -109,6 +110,7 @@ public class Venta {
     } 
      
      public void archivarDatosPropiedadBaldia(){
+         JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");
         try {
             String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadBaldia.txt";
             String contenido = (q);
