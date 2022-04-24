@@ -9,13 +9,13 @@ public class Venta {
     
     public void ingresarDatosPropiedadConstruida () {
         Propiedad pro=new Propiedad ();
-        pro.setValorPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
+        pro.setValorPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingresar el valor de la propiedad:")));
-        pro.setMedidasPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
+        pro.setMedidasPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingresar la cantidad de metros cuadrados que tiene la propiedad:")));
         pro.setCantHabitaciones(Byte.parseByte(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de habitaciones que tiene la propiedad:")));
-        pro.setMedidasPatio(Integer.parseInt(JOptionPane.showInputDialog(null,
+        pro.setMedidasPatio(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de metros cuadrados que tiene el patio: \n"
                 +"Si no tiene patio escriba cero","0")));
         pro.setCantBaños(Byte.parseByte(JOptionPane.showInputDialog(null,
@@ -38,9 +38,9 @@ public class Venta {
     public void mostrarDatosPropiedadConstruida () {
        String a,b,c,d,e,f;
        if(venderPropiedad[0].getMedidasPatio()>0){
-        a="La propiedad tiene patio de "+venderPropiedad[0].getMedidasPatio()+ " m²" ;
+           a="La propiedad tiene patio de "+venderPropiedad[0].getMedidasPatio()+ " m²" ;
        }else{
-        a="La propiedad no tiene patio.";   
+           a="La propiedad no tiene patio.";   
        }
        if(venderPropiedad[0].getComedor()==1){b= "Si";}else{b= "No";}
        if(venderPropiedad[0].getSala()==1){c="Si";}else{c="No";}
@@ -81,18 +81,18 @@ public class Venta {
     public void ingresarDatosPropiedadBaldia (){
         String s=" ";
         Propiedad pro=new Propiedad ();
-        pro.setValorPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
+        pro.setValorPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingresar el valor de la propiedad:")));
-        pro.setMedidasPropiedad(Integer.parseInt(JOptionPane.showInputDialog(null,
+        pro.setMedidasPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingresar la cantidad de metros cuadrados que tiene la propiedad:")));
         venderPropiedad[0]=pro; 
     } // fin de ingresarDatosPropiedadBaldia
     
-     public void mostrarDatosPropiedadBaldia () {       
+    public void mostrarDatosPropiedadBaldia () {       
        q="El valor de la propiedad es: "+ venderPropiedad[0].getValorPropiedad()+" colones. \n"
        +"La propiedad tiene "+venderPropiedad[0].getMedidasPropiedad() + " m² \n" ;      
        JOptionPane.showMessageDialog(null,q);
-   } 
+    } 
      
      public void archivarDatosPropiedadBaldia(){
         try {
@@ -112,4 +112,4 @@ public class Venta {
         }
     } // fin de mostrarFinal
     
-} // fin de compra
+} 
