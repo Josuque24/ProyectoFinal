@@ -69,7 +69,7 @@ public class Venta {
     public void archivarDatosPropiedadConstruida(){
         JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");
         try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadConstruida.txt";
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\ventaPropiedadConstruida.txt";
             String contenido = (s);
             File file = new File(ruta);
             // Si el archivo no existe es creado
@@ -112,7 +112,7 @@ public class Venta {
      public void archivarDatosPropiedadBaldia(){
          JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");
         try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\ventaPropiedadBaldia.txt";
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\ventaPropiedadBaldia.txt";
             String contenido = (q);
             File file = new File(ruta);
             // Si el archivo no existe es creado
