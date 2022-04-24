@@ -7,7 +7,7 @@ public class Rutina {
 private Persona usuario []=new Persona [1];    
      
 public void predefinirUsuario (){
-  usuario[0]=new Persona ("Jan J. Quesada","correoelectronico@email.com",89362969);     
+  usuario[0]=new Persona ("Jan J. Quesada","correoelectronico@email.com",24457070);     
 }//fin de ingresarDatosUsuario
 
 public void mostrarUsuario(){
