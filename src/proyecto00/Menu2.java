@@ -1,7 +1,5 @@
  package proyecto00;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 import javax.swing.JOptionPane;
 public class Menu2 {
     private byte respuestaMenuCompraVenta; 
