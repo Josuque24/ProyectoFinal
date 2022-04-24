@@ -6,15 +6,22 @@ private byte respuestaMenuPrincipal;
     public void responderMenuPrincipal (){
     Rutina r=new Rutina();
     Menu2 m2=new Menu2();
-    r.predefinirUsuario();
-    JOptionPane.showMessageDialog(null,"El programa empieza con un usuario por defecto. \n"
-            + "Por favor modifique la informacion de usuario con su informacion en el siguiente menu."
+    JOptionPane.showMessageDialog(null,"A continuacion el programa la pedira que ingrese su informacion personal. \n                       "
+            + "Despues de eso podra ingresar al menu principal.\n"
+            + "La informacion que provea aqui sera referida a un asesor de bienes raises. \n"
+            + "El acesor se pondra en contacto con usted en las proximas 48 horas."    
             , "Advertencia", JOptionPane.INFORMATION_MESSAGE);
+    r.predefinirUsuario();
+    //r.modificarUsuario();
+    r.archivarUsuario();
+        
+        JOptionPane.showMessageDialog(null,"Se guardo la informacion");
+        
         while(respuestaMenuPrincipal!=4){
         respuestaMenuPrincipal= Byte.parseByte(JOptionPane.showInputDialog (null,"Menu pricipal \n"
                 +"1) Mostrar los datos de usuario almacenados. \n"
                 +"2) Modifique la informacion de usuario. \n"
-                +"3) Entrar en menu de compra y venta. \n"                                
+                +"3) Entrar al menu de Compra y Venta. \n"                                
                 +"4) salir \n" ,"Menu",JOptionPane.INFORMATION_MESSAGE ));
             switch(respuestaMenuPrincipal){
                   case 1:{
@@ -26,8 +33,7 @@ private byte respuestaMenuPrincipal;
                     r.archivarUsuario();
                     JOptionPane.showMessageDialog(null,"Se guardo la informacion de usuario,"+
                             " esta se enviara a nuestros colaboradores para que ellos se pongan en contacto con usted. \n"
-                            + "La informacion que usted disponga mas adelante tambien sera referida a ellos."
-                            );
+                            + "La informacion que usted disponga mas adelante tambien sera referida a ellos.");
                      break;
                   }
                   case 3:{
