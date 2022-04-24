@@ -16,8 +16,7 @@ public class Menu2 {
                                             +"1) Vender \n"
                                             +"2) Comprar \n" 
                                             +"3) Salir")); 
-            if(respuestaMenuCompraVenta==1){
-                
+            if(respuestaMenuCompraVenta==1){                
                 Venta v=new Venta ();
                 //while(respuestaMenuVenta !=3){
                     respuestaMenuVenta = Byte.parseByte(JOptionPane.showInputDialog (null,""
