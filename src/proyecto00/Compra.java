@@ -5,12 +5,13 @@ import javax.swing.JOptionPane;
 public class Compra {
     private Propiedad comprarPropiedad []=new Propiedad [1];
     private Persona referencias[]=new Persona[3];
+    Provincias pv=new Provincias();
     private String s,q,v;
     private double g;
     private int answerDescuento;
     
    public void ingresarDatosPropiedadConstruida () {
-        Propiedad pro=new Propiedad ();
+        Propiedad pro=new Propiedad ();       
         pro.setValorPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de dinero que esta dispuesto a invertir en la propiedad: \n"
                 +"La suma es en dolares")));
@@ -33,8 +34,9 @@ public class Compra {
                 "Desea una propiedad con un garaje?\"\n" +
                 "0) No \n"+" 1) Si ")));
         pro.setCuartoLavado(Byte.parseByte(JOptionPane.showInputDialog(null,
-                "Desea una propiedad con uncuarto de lavado? \n"
+                "Desea una propiedad con un cuarto de lavado? \n"
                 +"0) No \n"+" 1) Si ")));
+        pv.elegirProvincias();  
         pro.setDireccion(JOptionPane.showInputDialog(null,
                 "Ingrese la direccion de donde le gustaria que se ubique la propiedad: "));
         pro.setAnotaciones(JOptionPane.showInputDialog(null,
@@ -55,7 +57,7 @@ public class Compra {
                +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n" 
                +"La propiedad debe tener "+comprarPropiedad[0].getCantHabitaciones()+" habitaciones."
                +"La propiedad debe tener "+comprarPropiedad[0].getCantBaños()+h+" \n"
-               +"Direccion aproximada donde la propiedad debe estar ubicada: "+comprarPropiedad[0].getDireccion() + "\n"
+               +"Direccion aproximada donde la propiedad debe estar ubicada: "+pv.getUbicacion()+comprarPropiedad[0].getDireccion() + "\n"
                +"La propiedad debe tener  patio: "+ a + "\n"               
                +"La propiedad debe tener comedor: "+ b +"\n"
                +"La propiedad debe tener sala: "+ c + "\n"
@@ -67,8 +69,9 @@ public class Compra {
    } 
    
    public void archivarDatosPropiedadConstruida(){
+       JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");
         try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\comprarPropiedadConstruida.txt";
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\comprarPropiedadConstruida.txt";
             String contenido = (s);
             File file = new File(ruta);
             // Si el archivo no existe es creado
@@ -145,9 +148,9 @@ public class Compra {
        JOptionPane.showMessageDialog(null,s);
                                                                                                                                 
                                 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                              
+                            JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");  
                             try {
-                                String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\comprarPropiedadConstruida.txt";
+                                String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\comprarPropiedadConstruida.txt";
                                 String contenido = (s);
                                 File file = new File(ruta);
                                 // Si el archivo no existe es creado
@@ -192,8 +195,9 @@ public class Compra {
     }
     
     public void archivarDatosPropiedadBaldia(){
+        JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");
         try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\compraPropiedadBaldia.txt";
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\compraPropiedadBaldia.txt";
             String contenido = (q);
             File file = new File(ruta);
             // Si el archivo no existe es creado
@@ -209,7 +213,7 @@ public class Compra {
         }
     }
     
-     public void referirNombresDescuentoBaldia(){
+    public void referirNombresDescuentoBaldia(){
         answerDescuento = JOptionPane.showConfirmDialog(null,
                     "Desea ganar un descuento de 1.5% de descuento en su compra final? \n"
                     +"Anote el nombre y el correo electronico de 3 amigos. \n"
@@ -257,9 +261,9 @@ public class Compra {
        JOptionPane.showMessageDialog(null,s);
                                                                                                                                 
                                 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                              
+                            JOptionPane.showMessageDialog(null,"La informacion fue guardada y enviada");  
                             try {
-                                String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\comprarPropiedadConstruida.txt";
+                                String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\compraPropiedadBaldia.txt";
                                 String contenido = (s);
                                 File file = new File(ruta);
                                 // Si el archivo no existe es creado
