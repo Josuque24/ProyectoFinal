@@ -4,16 +4,18 @@ import java.io.File;
 import java.io.FileWriter;
 import javax.swing. JOptionPane;
 public class Rutina {
-private Persona usuario []=new Persona [1];    
+private Persona usuario []=new Persona [1];
+private String usuarioString;
      
 public void predefinirUsuario (){
   usuario[0]=new Persona ("Jan J. Quesada","correoelectronico@email.com",24457070);     
 }//fin de ingresarDatosUsuario
 
-public void mostrarUsuario(){
-  JOptionPane.showMessageDialog(null," Nombre: " + usuario[0].getNombre()
-                                +"\n Email: " + usuario[0].getEmail()
-                                +"\n Numero de Telefono: " + usuario[0].getNumeroTelefono());  
+public void mostrarUsuario(){    
+   usuarioString=" Nombre: " + usuario[0].getNombre()
+                 +"\n Email: " + usuario[0].getEmail()
+                 +"\n Numero de Telefono: " + usuario[0].getNumeroTelefono();
+  JOptionPane.showMessageDialog(null,usuarioString);  
 }
 
 public void modificarUsuario (){
@@ -23,10 +25,10 @@ public void modificarUsuario (){
     p.setNumeroTelefono(Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el numero de telefono del Usuario:")));
     usuario[0]=p;
 } //fin de modificarUsuario
-     
+    
 public void archivarUsuario(){
         try {
-            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\usuario.txt";
+            String ruta = "C:\\Users\\janjo\\OneDrive\\Documentos\\Universidad\\Progra\\projects\\proyecto00\\txts\\usuario.txt";
             String contenido = (" Nombre: " + usuario[0].getNombre()
                                 +"\n Email: " + usuario[0].getEmail()
                                 +"\n Numero de Telefono: " + usuario[0].getNumeroTelefono());
@@ -42,7 +44,7 @@ public void archivarUsuario(){
         } catch (Exception e) {
             e.printStackTrace();
         }
-    } // fin de archivarusuario
+    } // fin de archivarusuario*/
 
 
 } // fin de rutina 
