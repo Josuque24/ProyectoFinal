@@ -1,19 +1,21 @@
 package proyecto00;
 import javax.swing.JOptionPane;
 public class Propiedad {
-    private int valorPropiedad;    
-    private int medidasPropiedad;
+    private double valorPropiedad;    
+    private double medidasPropiedad;
     private byte cantHabitaciones;
-    private int medidasPatio;
+    private double medidasPatio;
     private byte cantBaños;
     private byte comedor;
     private byte sala;
     private byte garaje;
     private byte cuartoLavado;
+    private String direccion;
+    private String anotaciones;
 
     public Propiedad (){
-    this.valorPropiedad=0;    
-    this.medidasPropiedad=0;
+    this.valorPropiedad=0.0;    
+    this.medidasPropiedad=0.0;
     this.cantHabitaciones=0;
     this.medidasPatio=0;
     this.cantBaños=0;
@@ -21,24 +23,26 @@ public class Propiedad {
     this.sala=0;
     this.garaje=0;
     this.cuartoLavado=0;
+    this.direccion= " ";
+    this.anotaciones= " ";
     }    
     
     
 
 
-    public int getValorPropiedad() {
+    public double getValorPropiedad() {
         return valorPropiedad;
     }
 
-    public void setValorPropiedad(int valorPropiedad) {
+    public void setValorPropiedad(double valorPropiedad) {
         this.valorPropiedad = valorPropiedad;
     }
 
-    public int getMedidasPropiedad() {
+    public double getMedidasPropiedad() {
         return medidasPropiedad;
     }
 
-    public void setMedidasPropiedad(int medidasPropiedad) {
+    public void setMedidasPropiedad(double medidasPropiedad) {
         this.medidasPropiedad = medidasPropiedad;
     }
 
@@ -50,11 +54,11 @@ public class Propiedad {
         this.cantHabitaciones = cantHabitaciones;
     }
 
-    public int getMedidasPatio() {
+    public double getMedidasPatio() {
         return medidasPatio;
     }
 
-    public void setMedidasPatio(int medidasPatio) {
+    public void setMedidasPatio(double medidasPatio) {
         this.medidasPatio = medidasPatio;
     }
 
@@ -97,8 +101,20 @@ public class Propiedad {
     public void setCuartoLavado(byte cuartoLavado) {
         this.cuartoLavado = cuartoLavado;
     }
-    
 
+    public String getDireccion() {
+        return direccion;
+    }
 
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 
+    public String getAnotaciones() {
+        return anotaciones;
+    }
+
+    public void setAnotaciones(String anotaciones) {
+        this.anotaciones = anotaciones;
+    }
 }
