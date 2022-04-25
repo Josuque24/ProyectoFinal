@@ -137,7 +137,7 @@ public class Compra {
                +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n" 
                +"La propiedad debe tener "+comprarPropiedad[0].getCantHabitaciones()+" habitaciones."
                +"La propiedad debe tener "+comprarPropiedad[0].getCantBaños()+h+" \n"
-               +"Direccion aproximada donde la propiedad debe estar ubicada: "+comprarPropiedad[0].getDireccion()+ " \n"
+               +"Direccion aproximada donde la propiedad debe estar ubicada: "+pv.getUbicacion()+comprarPropiedad[0].getDireccion() + "\n"
                +"La propiedad debe tener  patio: "+ a + "\n"              
                +"La propiedad debe tener comedor: "+ b +"\n"
                +"La propiedad debe tener sala: "+ c + "\n"
@@ -179,6 +179,7 @@ public class Compra {
                 +"La suma es en dolares.")));
         pro.setMedidasPropiedad(Double.parseDouble(JOptionPane.showInputDialog(null,
                 "Ingrese la cantidad de metros cuadrados que desea que posea la propiedad:")));
+        pv.elegirProvincias();
         pro.setDireccion(JOptionPane.showInputDialog(null,
                 "Ingrese la direccion de donde le gustaria que se ubique la propiedad: "));
         pro.setAnotaciones(JOptionPane.showInputDialog(null,
@@ -188,8 +189,8 @@ public class Compra {
                
     public void mostrarDatosPropiedadBaldia () {       
         q="La cantidad de dinero dispuesto a invertirse en la compra es: "+ comprarPropiedad[0].getValorPropiedad()+" colones. \n"
-        +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n" 
-        +"Direccion aproximada donde la propiedad debe estar ubicada: "+comprarPropiedad[0].getDireccion()+" \n"
+        +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n"
+        +"Direccion aproximada donde la propiedad debe estar ubicada: "+pv.getUbicacion()+comprarPropiedad[0].getDireccion() + "\n"
         +"Anotaciones: \n"+comprarPropiedad[0].getAnotaciones();      
         JOptionPane.showMessageDialog(null,q);
     }
@@ -255,7 +256,7 @@ public class Compra {
        s="Hay "+ comprarPropiedad[0].getValorPropiedad()+" dolares disponibles para la compra de una propiedad. \n"
                +"Se le hara un descuento de "+g+ " dolares en su compra final. \n"
                +"La propiedad debe tener "+comprarPropiedad[0].getMedidasPropiedad() + " m² aproximadamente. \n"                    
-               +"Direccion aproximada donde la propiedad debe estar ubicada: "+comprarPropiedad[0].getDireccion()+ " \n"                         
+               +"Direccion aproximada donde la propiedad debe estar ubicada: "+pv.getUbicacion()+comprarPropiedad[0].getDireccion() + "\n"                        
                +"Anotaciones: \n"+comprarPropiedad[0].getDireccion()+" \n"
                +"Amigos referidos: "+ t;
        JOptionPane.showMessageDialog(null,s);
