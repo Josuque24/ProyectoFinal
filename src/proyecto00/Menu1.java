@@ -2,7 +2,8 @@ package proyecto00;
 import static java.lang.System.exit;
 import javax.swing.JOptionPane;
 public class Menu1 {
-private byte respuestaMenuPrincipal;  
+private byte respuestaMenuPrincipal;
+private String usuarioString;
     public void responderMenuPrincipal (){
     Rutina r=new Rutina();
     Menu2 m2=new Menu2();
@@ -12,10 +13,10 @@ private byte respuestaMenuPrincipal;
             + "El acesor se pondra en contacto con usted en las proximas 48 horas."    
             , "Advertencia", JOptionPane.INFORMATION_MESSAGE);
     r.predefinirUsuario();
-    //r.modificarUsuario();
-    r.archivarUsuario();
-        
-        JOptionPane.showMessageDialog(null,"Se guardo la informacion");
+    r.modificarUsuario();
+    r.mostrarUsuario();
+    r.archivarUsuario();        
+ //JOptionPane.showMessageDialog(null,"Se guardo la informacion");
         
         while(respuestaMenuPrincipal!=4){
         respuestaMenuPrincipal= Byte.parseByte(JOptionPane.showInputDialog (null,"Menu pricipal \n"
@@ -31,9 +32,7 @@ private byte respuestaMenuPrincipal;
                   case 2:{
                     r.modificarUsuario();
                     r.archivarUsuario();
-                    JOptionPane.showMessageDialog(null,"Se guardo la informacion de usuario,"+
-                            " esta se enviara a nuestros colaboradores para que ellos se pongan en contacto con usted. \n"
-                            + "La informacion que usted disponga mas adelante tambien sera referida a ellos.");
+                    JOptionPane.showMessageDialog(null,"Se guardo la informacion de usuario,");
                      break;
                   }
                   case 3:{
